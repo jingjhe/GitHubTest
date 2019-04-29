@@ -5,6 +5,7 @@ import android.support.design.widget.Snackbar
 import android.support.v7.app.AppCompatActivity;
 
 import kotlinx.android.synthetic.main.activity_aa.*
+import kotlinx.android.synthetic.main.content_aa.*
 
 class AAActivity : AppCompatActivity() {
 
@@ -14,6 +15,8 @@ class AAActivity : AppCompatActivity() {
         setSupportActionBar(toolbar)
 
         fab.setOnClickListener { view ->
+            textView2.text = "A2"
+            textView2.textSize = 16F
             Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
                 .setAction("Action", null).show()
         }
