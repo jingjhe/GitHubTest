@@ -19,6 +19,11 @@
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
+        <activity
+                android:name=".AAActivity"
+                android:label="@string/title_activity_aa"
+                android:theme="@style/AppTheme.NoActionBar">
+        </activity>
     </application>
 
 </manifest>

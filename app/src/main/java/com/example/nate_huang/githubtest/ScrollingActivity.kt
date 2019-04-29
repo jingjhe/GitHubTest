@@ -1,11 +1,14 @@
 package com.example.nate_huang.githubtest
 
+import android.content.Intent
 import android.os.Bundle
+import android.os.Environment
 import android.support.design.widget.Snackbar
 import android.support.v7.app.AppCompatActivity
 import android.view.Menu
 import android.view.MenuItem
 import kotlinx.android.synthetic.main.activity_scrolling.*
+import java.io.File
 
 class ScrollingActivity : AppCompatActivity() {
 
@@ -14,9 +17,13 @@ class ScrollingActivity : AppCompatActivity() {
         setContentView(R.layout.activity_scrolling)
         setSupportActionBar(toolbar)
         fab.setOnClickListener { view ->
-            Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                .setAction("Action", null).show()
+            //            Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
+//                .setAction("Action", null).show()
+            val intent = Intent(this, AAActivity::class.java)
+            startActivity(intent)
         }
+        println("fileName=>${getPublicAlbumStorageDir("ablumNate").toString()}")
+
     }
 
     override fun onCreateOptionsMenu(menu: Menu): Boolean {
@@ -35,4 +42,20 @@ class ScrollingActivity : AppCompatActivity() {
             else -> super.onOptionsItemSelected(item)
         }
     }
+
+
+    fun getPublicAlbumStorageDir(albumName: String): File? {
+        // Get the directory for the user's public pictures directory.
+        val file = File(
+            Environment.getExternalStoragePublicDirectory(
+                Environment.DIRECTORY_PICTURES
+            ), albumName
+        )
+        if (!file.mkdirs()) {
+            //Log.e(LOG_TAG, "Directory not created")
+            println("Directory not created")
+        }
+        return file
+    }
+
 }
