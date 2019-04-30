@@ -92,5 +92,9 @@
     <string name="action_settings">Settings</string>
     <string name="action_language">Language</string>
     <string name="action_profile">Profile</string>
-    <string name="title_activity_aa">AAActivity</string>
+    <string name="c1">c1</string>
+    <string name="c2">c2</string>
+    <string name="c3">c3</string>
+
+
 </resources>
