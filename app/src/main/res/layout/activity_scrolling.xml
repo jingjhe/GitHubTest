@@ -30,10 +30,6 @@
                     android:layout_width="match_parent"
                     app:layout_collapseMode="pin"
                     app:popupTheme="@style/AppTheme.PopupOverlay"/>
-            <Button
-                    android:text="Button"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content" android:id="@+id/button"/>
 
         </android.support.design.widget.CollapsingToolbarLayout>
     </android.support.design.widget.AppBarLayout>
@@ -50,11 +46,5 @@
             app:srcCompat="@android:drawable/ic_dialog_email"
             app:backgroundTint="@color/design_default_color_primary_dark"/>
 
-
-    <Button
-            android:text="Button2"
-            android:layout_margin="20dp"
-            android:layout_width="169dp"
-            android:layout_height="wrap_content" android:id="@+id/button2"/>
 
 </android.support.design.widget.CoordinatorLayout>
